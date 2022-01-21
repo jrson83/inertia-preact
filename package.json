@@ -1,0 +1,60 @@
+{
+  "name": "@jrson83/inertia-preact",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "The Preact adapter for Inertia.js, based on @inertiajs/inertia-react",
+  "author": "Jörn Spangenberg <me@jrson.de> (https://jrson.de)",
+  "contributors": [
+    "Robert Boes (https://github.com/RobertBoes)"
+  ],
+  "homepage": "https://inertiajs.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrson83/inertia-preact.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jrson83/inertia-preact/issues"
+  },
+  "keywords": [
+    "preact",
+    "inertia",
+    "adapter"
+  ],
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "dev": "npm run clean && npm run dev:cjs && npm run dev:umd",
+    "dev:cjs": "microbundle --no-compress --jsx h --no-generateTypes --format cjs",
+    "dev:umd": "microbundle --no-compress --jsx h --no-generateTypes --format umd --name InertiaPreact --globals preact=Preact,preact/hooks=PreactHooks,preact/compat=PreactCompat,lodash.isequal=LodashIsEqual,@inertiajs/inertia=Inertia",
+    "build": "npm run clean && npm run build:cjs && npm run build:umd",
+    "build:cjs": "microbundle --jsx h --format cjs",
+    "build:umd": "microbundle --jsx h --format umd --name InertiaPreact --globals preact=Preact,preact/hooks=PreactHooks,preact/compat=PreactCompat,lodash.isequal=LodashIsEqual,@inertiajs/inertia=Inertia",
+    "clean": "rm -rf dist",
+    "fix:eslint": "eslint --ext .js src/ --fix",
+    "fix:prettier": "prettier --write --loglevel warn 'src/**/*.js'",
+    "fix-code-style": "npm run fix:prettier && npm run fix:eslint",
+    "prepublishOnly": "npm run build",
+    "watch": "microbundle watch --no-compress --jsx h --no-generateTypes --format cjs"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.7",
+    "@inertiajs/inertia": "^0.11.0",
+    "eslint": "^8.7.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-plugin-jest": "^25.7.0",
+    "jest": "^27.4.7",
+    "microbundle": "^0.14.2",
+    "preact": "^10.6.4",
+    "preact-render-to-string": "^5.1.19",
+    "prettier": "^2.5.1"
+  },
+  "peerDependencies": {
+    "@inertiajs/inertia": "^0.11.0",
+    "preact": "^10.6.4"
+  },
+  "dependencies": {
+    "lodash.isequal": "^4.5.0"
+  }
+}
