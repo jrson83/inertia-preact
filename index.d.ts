@@ -3,15 +3,15 @@ import * as Preact from 'preact/src/index'
 import { JSXInternal } from 'preact/src/jsx'
 import { renderToString } from 'preact-render-to-string'
 
+// Missing interface from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/afd309b4193c1f448386bf8fe09e512e4422e69e/types/react/index.d.ts#L146
 export interface PreactElement<P = any, T extends string | JSXElementConstructor<any> = string | JSXElementConstructor<any>> {
   type: T;
   props: P;
   key: Preact.Key | null;
 }
 
-export type JSXElementConstructor<P> =
-| ((props: P) => PreactElement<any, any> | null)
-| (new (props: P) => Preact.Component<any, any>);
+// Missing interface from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/afd309b4193c1f448386bf8fe09e512e4422e69e/types/react/index.d.ts#L84
+export type JSXElementConstructor<P> = ((props: P) => PreactElement<any, any> | null) | (new (props: P) => Preact.Component<any, any>);
 
 export type PreactInstance = PreactElement;
 export type PreactComponent = Preact.VNode;
