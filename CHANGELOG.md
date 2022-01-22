@@ -2,6 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## v0.1.0 - 2022-22-01
+#### 0.1.0 (2022-01-22)
 
 - Initial release
