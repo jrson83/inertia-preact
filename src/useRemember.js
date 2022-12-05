@@ -2,15 +2,15 @@ import { useEffect, useState } from 'preact/hooks'
 import { Inertia } from '@inertiajs/inertia'
 
 export default function useRemember(initialState, key) {
-	const [state, setState] = useState(() => {
-		const restored = Inertia.restore(key)
+  const [state, setState] = useState(() => {
+    const restored = Inertia.restore(key)
 
-		return restored !== undefined ? restored : initialState
-	})
+    return restored !== undefined ? restored : initialState
+  })
 
-	useEffect(() => {
-		Inertia.remember(state, key)
-	}, [state, key])
+  useEffect(() => {
+    Inertia.remember(state, key)
+  }, [state, key])
 
-	return [state, setState]
+  return [state, setState]
 }
