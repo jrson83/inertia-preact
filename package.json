@@ -32,8 +32,8 @@
     "build:cjs": "microbundle --jsx h --format cjs",
     "build:umd": "microbundle --jsx h --format umd --name InertiaPreact --globals preact=Preact,preact/hooks=PreactHooks,preact/compat=PreactCompat,lodash.isequal=LodashIsEqual,@inertiajs/inertia=Inertia",
     "clean": "rm -rf dist",
-    "fmt": "prettier --write src",
-    "fmt:check": "prettier --check src",
+    "fmt": "prettier --write src index.d.ts **/*.md",
+    "fmt:check": "prettier --check src index.d.ts **/*.md",
     "prepublishOnly": "npm run build",
     "watch": "microbundle watch --no-compress --jsx h --no-generateTypes --format cjs"
   },
