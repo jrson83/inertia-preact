@@ -4,6 +4,10 @@ The [Preact](https://preactjs.com/) adapter for [Inertia.js](https://inertiajs.c
 
 > This is a port of the original [Inertia.js React Adapter](https://github.com/inertiajs/inertia).
 
+## Installation
+
+A detailed guide on how to install & set up the adapter can be found on my blog [jrson.me](https://jrson.me).
+
 ## Ping CRM Demo
 
 A live demo of the app & SSR is available at [https://pingcrm-preact.jrson.de/](https://pingcrm-preact.jrson.de/).
