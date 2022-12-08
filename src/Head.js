@@ -1,8 +1,8 @@
-import HeadContext from './HeadContext'
 import { cloneElement } from 'preact'
 import { useContext, useEffect, useMemo } from 'preact/hooks'
+import HeadContext from './HeadContext'
 
-export default function InertiaHead({ children, title }) {
+export default function Head({ children, title }) {
   const headManager = useContext(HeadContext)
   const provider = useMemo(() => headManager.createProvider(), [headManager])
 

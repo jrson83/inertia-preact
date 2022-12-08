@@ -1,7 +1,7 @@
-import isEqual from 'lodash.isequal'
-import useRemember from './useRemember'
-import { Inertia } from '@inertiajs/inertia'
+import { router } from '@inertiajs/core'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
+import { isEqual } from 'lodash.isEqual'
+import useRemember from './useRemember'
 
 export default function useForm(...args) {
   const isMounted = useRef(null)
@@ -115,9 +115,9 @@ export default function useForm(...args) {
       }
 
       if (method === 'delete') {
-        Inertia.delete(url, { ..._options, data: transform(data) })
+        router.delete(url, { ..._options, data: transform(data) })
       } else {
-        Inertia[method](url, transform(data), _options)
+        router[method](url, transform(data), _options)
       }
     },
     [data, setErrors],

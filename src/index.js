@@ -1,7 +1,9 @@
+import { router as Router } from '@inertiajs/core'
+
+export const router = Router
+export { default as createInertiaApp } from './createInertiaApp'
+export { default as Head } from './Head'
+export { default as Link } from './Link'
 export { default as useForm } from './useForm'
 export { default as usePage } from './usePage'
-export { default as createInertiaApp } from './createInertiaApp'
-export { default as Head, default as InertiaHead } from './Head'
 export { default as useRemember } from './useRemember'
-export { default as App, default as InertiaApp, default as app } from './App'
-export { default as Link, default as InertiaLink, default as link } from './Link'

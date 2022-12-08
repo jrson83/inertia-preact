@@ -1,11 +1,11 @@
+import { mergeDataIntoQueryString, router, shouldIntercept } from '@inertiajs/core'
 import { h } from 'preact'
 import { forwardRef } from 'preact/compat'
 import { useCallback } from 'preact/hooks'
-import { Inertia, mergeDataIntoQueryString, shouldIntercept } from '@inertiajs/inertia'
 
 const noop = () => undefined
 
-export default forwardRef(function InertiaLink(
+export default forwardRef(function Link(
   {
     children,
     as = 'a',
@@ -38,7 +38,7 @@ export default forwardRef(function InertiaLink(
       if (shouldIntercept(event)) {
         event.preventDefault()
 
-        Inertia.visit(href, {
+        router.visit(href, {
           data,
           method,
           preserveScroll,
@@ -86,7 +86,7 @@ export default forwardRef(function InertiaLink(
 
   if (as === 'a' && method !== 'get') {
     console.warn(
-      `Creating POST/PUT/PATCH/DELETE <a> links is discouraged as it causes "Open Link in New Tab/Window" accessibility issues. Please specify a more appropriate element using the "as" attribute. For example: <Link href="${href}" method="${method}" as="button">...</Link>`,
+      `Creating POST/PUT/PATCH/DELETE <a> links is discouraged as it causes "Open Link in New Tab/Window" accessibility issues.\n\nPlease specify a more appropriate element using the "as" attribute. For example:\n\n<Link href="${href}" method="${method}" as="button">...</Link>`,
     )
   }
 

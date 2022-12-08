@@ -1,7 +1,7 @@
-import * as Inertia from '@inertiajs/inertia'
+import * as Inertia from '@inertiajs/core'
+import { renderToString } from 'preact-render-to-string'
 import * as Preact from 'preact/src/index'
 import { JSXInternal } from 'preact/src/jsx'
-import { renderToString } from 'preact-render-to-string'
 
 // Missing interface from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/afd309b4193c1f448386bf8fe09e512e4422e69e/types/react/index.d.ts#L146
 export interface PreactElement<
