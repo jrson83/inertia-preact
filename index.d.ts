@@ -158,3 +158,5 @@ export function createInertiaApp<SharedProps = Inertia.PageProps>(
 export function createInertiaApp<SharedProps = Inertia.PageProps>(
   options: InertiaAppOptionsForSSR<SharedProps>,
 ): Promise<CreateInertiaAppSSRContent>
+
+export declare const router: typeof Inertia.router
