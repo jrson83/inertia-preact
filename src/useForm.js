@@ -1,6 +1,6 @@
 import { router } from '@inertiajs/core'
+import { isEqual } from 'lodash.isequal'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
-import { isEqual } from 'lodash.isEqual'
 import useRemember from './useRemember'
 
 export default function useForm(...args) {
