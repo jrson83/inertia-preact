@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 project adheres to [Semantic Versioning](https://semver.org/).
 
+## [v1.0.0-beta.2.1](https://github.com/jrson83/inertia-preact/releases/tag/inertia-preact%401.0.0-beta.2.1) - 2022-12-10
+
+### Fixed
+
+- Fixed `TypeError: server.createServer is not a function`
+
 ## [v1.0.0-beta.2](https://github.com/jrson83/inertia-preact/releases/tag/inertia-preact%401.0.0-beta.2) - 2022-12-10
 
 Adapter is based on `@inertiajs/react@1.0.0-beta.2`
