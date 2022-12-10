@@ -1,5 +1,5 @@
 import { router } from '@inertiajs/core'
-import { isEqual } from 'lodash.isequal'
+import isEqual from 'lodash.isequal'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 import useRemember from './useRemember'
 
