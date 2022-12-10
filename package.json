@@ -34,8 +34,8 @@
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run build",
     "watch": "microbundle watch --format es,cjs",
-    "fmt": "prettier --write src index.d.ts **/*.md",
-    "fmt:check": "prettier --check src index.d.ts **/*.md"
+    "fmt": "prettier --write src index.d.ts server.d.ts ./*.md",
+    "fmt:check": "prettier --check src index.d.ts server.d.ts ./*.md"
   },
   "devDependencies": {
     "@types/node": "^18.11.11",
