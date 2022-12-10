@@ -16,9 +16,13 @@
     "url": "https://github.com/jrson83/inertia-preact/issues"
   },
   "keywords": [
-    "preact",
     "inertia",
-    "adapter"
+    "inertiajs",
+    "inertiajs-adapter",
+    "laravel",
+    "preact",
+    "preactjs",
+    "ssr"
   ],
   "source": "src/index.js",
   "main": "dist/index.js",
