@@ -140,6 +140,7 @@ export type CreateInertiaAppSetupReturnType = PreactInstance | void
 export type InertiaAppOptionsForCSR<SharedProps> = BaseInertiaAppOptions & {
   id?: string
   page?: Inertia.Page | string
+  progress?: Parameters<typeof Inertia.setupProgress>[0]
   render?: undefined
   setup(options: SetupOptions<HTMLElement, SharedProps>): CreateInertiaAppSetupReturnType
 }
