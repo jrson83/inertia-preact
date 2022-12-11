@@ -10,7 +10,7 @@ export default async function createInertiaApp({ id = 'app', resolve, setup, tit
 
   let head = []
 
-  const reactApp = await resolveComponent(initialPage.component).then((initialComponent) => {
+  const preactApp = await resolveComponent(initialPage.component).then((initialComponent) => {
     return setup({
       el,
       App,
@@ -36,7 +36,7 @@ export default async function createInertiaApp({ id = 'app', resolve, setup, tit
           id,
           'data-page': JSON.stringify(initialPage),
         },
-        reactApp,
+        preactApp,
       ),
     )
 

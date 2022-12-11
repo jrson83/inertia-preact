@@ -9,7 +9,11 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Added [@jrson83/inertia-preact-preset](https://github.com/jrson83/inertia-preact-preset) to README.md
+- Added [@jrson83/inertia-preact-preset](https://github.com/jrson83/inertia-preact-preset) to `README.md`
+
+### Fixed
+
+- Fixed typo `reactApp` => `preactApp` in `createInertiaApp.js`
 
 ## [v1.0.0-beta.2.1](https://github.com/jrson83/inertia-preact/releases/tag/inertia-preact%401.0.0-beta.2.1) - 2022-12-10
 
