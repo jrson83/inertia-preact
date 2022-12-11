@@ -15,21 +15,22 @@ npm install @jrson83/inertia-preact -D
 ```
 
 ### Preset
-The recommended way of installing the adapter is to 
+
+The recommended way of installing the adapter is to
 create a fresh Laravel project and use the preset.
 
 ```bash
 npx @preset/cli apply jrson83/inertia-preact-preset
 ```
 
-This preset installs [Inertia.js](https://inertiajs.com) 
-with [Preact](https://preactjs.com/), 
-[TypeScript](https://www.typescriptlang.org/), 
-[Vite](https://vitejs.dev) and 
-[SSR](https://inertiajs.com/server-side-rendering) in a 
+This preset installs [Inertia.js](https://inertiajs.com)
+with [Preact](https://preactjs.com/),
+[TypeScript](https://www.typescriptlang.org/),
+[Vite](https://vitejs.dev) and
+[SSR](https://inertiajs.com/server-side-rendering) in a
 fresh Laravel application.
 
-More information on the options on the 
+More information on the options on the
 [repository](https://github.com/jrson83/inertia-preact-preset).
 
 More information on the adapter can be found on my blog
